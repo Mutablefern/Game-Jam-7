@@ -1,5 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerPlatformer : MonoBehaviour
 {
@@ -18,15 +20,21 @@ public class PlayerPlatformer : MonoBehaviour
     [SerializeField] float gravityDelay = 0.2f;
     [SerializeField] float maxFallSpeedVelocity = -20f;
 
-    Vector2 movementVector;
+    Vector2 movementVector, startPos;
     float timeInAir, coyoteTimer;
 
-    Rigidbody2D PlayerRigidbody;
 
+    Rigidbody2D PlayerRigidbody;
+    InputAction buttonOne;
 
     private void Awake()
     {
         PlayerRigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        startPos = transform.position;
     }
 
     private void Update()
@@ -58,7 +66,7 @@ public class PlayerPlatformer : MonoBehaviour
         PlayerRigidbody.linearVelocityX = movementVector.x * movmentSpeed; 
     }
 
-    void OnJump(InputValue value)
+    void OnButtonOne(InputValue value)
     {
         if (value.isPressed)
         {
@@ -121,6 +129,15 @@ public class PlayerPlatformer : MonoBehaviour
     {
         Collider2D isGrounded = Physics2D.OverlapBox(feetTransform.position, groundCheck, 0f, groundLayer);
         return isGrounded;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.layer == 7)
+        {
+            Debug.Log("die");
+            transform.position = startPos;
+        }
     }
 
     void OnDrawGizmos()
