@@ -7,7 +7,7 @@ public class PlatformerButton : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("win");
+            Debug.Log(other.name + " wins");
         }
     }
 }
