@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,8 +9,13 @@ public class FindTheButtonScript : MonoBehaviour
     [SerializeField] BoxCollider2D my_boxCollider;
     private bool hasGuessed = false;
     private Vector2 movementVector;
+    int PlayerNumber;
 
-
+    private void Start()
+    {
+        string PlayerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
+        int.TryParse(PlayerNumberString, out PlayerNumber);
+    }
 
     private void OnMove(InputValue value)
     {
@@ -32,9 +38,10 @@ public class FindTheButtonScript : MonoBehaviour
         {
             if (collision.gameObject.name == "CorrectButton")
             {
-                Debug.Log("Win");
+                if (PlayerNumber == 1) MinigameManager.Instance.PlayerLose(2, 0);
+                if (PlayerNumber == 2) MinigameManager.Instance.PlayerLose(1, 0);
             }
-            else { Debug.Log("lose"); }
+            else { MinigameManager.Instance.PlayerLose(PlayerNumber, 0); }
         }
     }
 }

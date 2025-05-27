@@ -9,7 +9,7 @@ public class MinigameManager : MonoBehaviour
     public static MinigameManager Instance;
 
     public string sceneName;
-    public static int[] PlayerHealth = new int[] {3, 3};
+    public static int[] PlayerHealth = new int[] {10, 10};
 
     private void Awake()
     {
@@ -59,7 +59,12 @@ public class MinigameManager : MonoBehaviour
         }
         else
         {
-            int SceneToChangeTo = Random.Range(2, SceneManager.sceneCountInBuildSettings);
+            int SceneToChangeTo = Random.Range(2, SceneManager.sceneCountInBuildSettings - 2);
+            if (SceneToChangeTo == SceneManager.sceneCountInBuildSettings-3)
+            {
+                SceneToChangeTo = (Random.Range(1, 3) + SceneManager.sceneCountInBuildSettings - 3);
+                Debug.Log(SceneToChangeTo);
+            }
             changeScenebyNumber(SceneToChangeTo);
         }
     }

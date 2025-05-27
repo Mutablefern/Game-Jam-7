@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      24hours_button_pixel-Sheet 1_0: 2577551609756312708
+      24hours_button_pixel-Sheet 1_1: -7366754074449430085
+      24hours_button_pixel-Sheet 1_2: 7034293682565723012
+      24hours_button_pixel-Sheet 1_3: 2974350800367913826
+      24hours_button_pixel-Sheet 1_4: 9082892185716228609
+      24hours_button_pixel-Sheet 1_5: -3908409424707493815
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Text.RegularExpressions;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -31,6 +32,7 @@ public class PlayerPlatformer : MonoBehaviour
 
     [Header("Misc")]
     [SerializeField] GameObject otherPlayer;
+    int PlayerNumber;
 
     Vector2 movementVector, startPos;
     float timeInAir, coyoteTimer, lastRunTime;
@@ -48,6 +50,8 @@ public class PlayerPlatformer : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         otherPlayerScript = otherPlayer.GetComponent<PlayerPlatformer>();
         boxCollider = GetComponent<BoxCollider2D>();
+        string PlayerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
+        int.TryParse(PlayerNumberString, out PlayerNumber);
     }
 
     private void Start()
@@ -203,6 +207,7 @@ public class PlayerPlatformer : MonoBehaviour
     public void Loss()
     {
         hasLost = true;
+        MinigameManager.Instance.PlayerLose(PlayerNumber, 2.5f);
         boxCollider.enabled = false;
         PlayerRigidbody.linearVelocity = Vector2.zero;
         PlayerRigidbody.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
