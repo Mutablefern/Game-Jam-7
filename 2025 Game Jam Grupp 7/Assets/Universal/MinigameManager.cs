@@ -54,6 +54,7 @@ public class MinigameManager : MonoBehaviour
         }
         else
         {
+            int SceneToChangeTo = Random.Range(1, SceneManager.sceneCountInBuildSettings);
             changeScene("TransitionScene");
         }
     }
@@ -61,6 +62,6 @@ public class MinigameManager : MonoBehaviour
 
     private void GameOver(int GameOverPlayer)
     {
-        changeScene("Game Over");
+        changeScene("Game Over" + GameOverPlayer);
     }
 }
