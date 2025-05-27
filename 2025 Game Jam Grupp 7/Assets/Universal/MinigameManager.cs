@@ -31,37 +31,41 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
-    public void changeScene(string SceneName)
+    public void changeScenebyName(string SceneName)
     {
         SceneManager.LoadScene(SceneName);
+    }
+    public void changeScenebyNumber(int SceneNumber)
+    {
+        SceneManager.LoadScene(SceneNumber);
     }
     public void PlayerLose( int LostPlayer, float VictoryTime)
     {
         Debug.Log(LostPlayer);
-        PlayerHealth[LostPlayer--]--; //Why does everything start with 0
+        PlayerHealth[LostPlayer-1]--; //Why does everything start with 0
         StartCoroutine(WaitForVictoryGraphics(VictoryTime));
     }
+
     IEnumerator WaitForVictoryGraphics(float waitingtime)
     {
         yield return new WaitForSeconds(waitingtime);
-        if (PlayerHealth[1] == 0)
+        if (PlayerHealth[0] == 0)
         {
             GameOver(1);
         }
-        else if (PlayerHealth[2] == 0)
+        else if (PlayerHealth[1] == 0)
         {
             GameOver(2);
         }
         else
         {
-            int SceneToChangeTo = Random.Range(1, SceneManager.sceneCountInBuildSettings);
-            changeScene("TransitionScene");
+            int SceneToChangeTo = Random.Range(2, SceneManager.sceneCountInBuildSettings);
+            changeScenebyNumber(SceneToChangeTo);
         }
     }
 
-
     private void GameOver(int GameOverPlayer)
     {
-        changeScene("Game Over" + GameOverPlayer);
+        changeScenebyName("VictoryScene");
     }
 }
