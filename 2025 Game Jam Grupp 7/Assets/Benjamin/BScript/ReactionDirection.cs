@@ -8,9 +8,11 @@ public class ReactionDirection : MonoBehaviour
     Vector2 ButtonInput;
     int ChosenDirection = 999999;
     int PlayerNumber;
+    MinigameManager MinigameManager;
 
     private void Start()
     {
+        MinigameManager = GameObject.Find("MinigameManager").GetComponent<MinigameManager>();
         string PlayerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
         int.TryParse(PlayerNumberString, out PlayerNumber);
     }

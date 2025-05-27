@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class MinigameManager : MonoBehaviour
@@ -30,20 +31,36 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
-    public static void changeScene(string SceneName)
+    public void changeScene(string SceneName)
     {
         SceneManager.LoadScene(SceneName);
     }
-
-    public static void PlayerLose( int LostPlayer)
+    public void PlayerLose( int LostPlayer, float VictoryTime)
     {
         Debug.Log(LostPlayer);
-        PlayerHealth[LostPlayer-1]--; //Why does everything start with 0
-        MinigameManager.changeScene("TransitionScene");
+        PlayerHealth[LostPlayer--]--; //Why does everything start with 0
+        StartCoroutine(WaitForVictoryGraphics(VictoryTime));
+    }
+    IEnumerator WaitForVictoryGraphics(float waitingtime)
+    {
+        yield return new WaitForSeconds(waitingtime);
+        if (PlayerHealth[1] == 0)
+        {
+            GameOver(1);
+        }
+        else if (PlayerHealth[2] == 0)
+        {
+            GameOver(2);
+        }
+        else
+        {
+            changeScene("TransitionScene");
+        }
     }
 
-    private void GameOver()
-    {
 
+    private void GameOver(int GameOverPlayer)
+    {
+        changeScene("Game Over");
     }
 }
