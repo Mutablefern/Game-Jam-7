@@ -34,7 +34,7 @@ public class PlayerPlatformer : MonoBehaviour
 
     Vector2 movementVector, startPos;
     float timeInAir, coyoteTimer, lastRunTime;
-    bool isRunning, isJumping, hasWon, hasLost;
+    bool isRunning, isJumping, hasWon, hasLost = false;
 
 
     Rigidbody2D PlayerRigidbody;
