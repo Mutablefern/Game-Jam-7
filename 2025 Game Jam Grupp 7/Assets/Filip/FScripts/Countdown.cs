@@ -6,7 +6,7 @@ using TMPro;
 
 public class Countdown : MonoBehaviour
 {
-    float currentTime;
+    public float currentTime;
     public float countdown = 5f;
 
     [SerializeField] TMP_Text countdownText;
@@ -19,7 +19,10 @@ public class Countdown : MonoBehaviour
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
+        if (countdownText != null)
+        {
+            countdownText.text = currentTime.ToString("0");
+        }
 
         if (currentTime <= 0)
         {
