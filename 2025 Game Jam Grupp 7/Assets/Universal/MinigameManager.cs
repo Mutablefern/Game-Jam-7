@@ -66,6 +66,6 @@ public class MinigameManager : MonoBehaviour
 
     private void GameOver(int GameOverPlayer)
     {
-        C("Game Over" + GameOverPlayer);
+        changeScenebyName("VictoryScene");
     }
 }
