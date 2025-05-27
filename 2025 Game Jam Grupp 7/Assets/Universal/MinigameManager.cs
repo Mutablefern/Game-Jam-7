@@ -8,6 +8,7 @@ public class MinigameManager : MonoBehaviour
     public static MinigameManager Instance;
 
     public string sceneName;
+    public static int[] PlayerHealth = new int[] {3, 3};
 
     private void Awake()
     {
@@ -29,18 +30,20 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
-    public void changeScene()
+    public static void changeScene(string SceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(SceneName);
     }
 
-    public void PlayerLose()
+    public static void PlayerLose( int LostPlayer)
     {
-
+        Debug.Log(LostPlayer);
+        PlayerHealth[LostPlayer-1]--; //Why does everything start with 0
+        MinigameManager.changeScene("TransitionScene");
     }
 
     private void GameOver()
     {
-        changeScene();
+
     }
 }
