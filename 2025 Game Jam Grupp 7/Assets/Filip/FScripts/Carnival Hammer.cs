@@ -21,7 +21,7 @@ public class CarnivalHammer : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (charge >= 0f)
+        if (!hasEnded && charge >= 0f)
         {
             charge -= 0.06f;
         }
@@ -31,7 +31,7 @@ public class CarnivalHammer : MonoBehaviour
 
     private void OnButtonOne(InputValue value)
     {
-        if (value.isPressed)
+        if (!hasEnded && value.isPressed)
         {
             charge += 5f;
         }
@@ -39,7 +39,7 @@ public class CarnivalHammer : MonoBehaviour
 
     private IEnumerator Swing(float charge)
     {
-        while (!hasEnded)
+        if (!hasEnded)
         {
             yield return new WaitForSeconds(5f);
 
@@ -47,11 +47,14 @@ public class CarnivalHammer : MonoBehaviour
 
             hasEnded = true;
             ReportResult();
+
+            Debug.Log("Swing");
         }
     }
 
     private void ReportResult()
     {
+       Debug.Log("Reported Score");
        ScoreManager.Instance.ReportScore(playerNumber, score);
     }
 }
