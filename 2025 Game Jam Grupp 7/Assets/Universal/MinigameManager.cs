@@ -35,12 +35,14 @@ public class MinigameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneName);
     }
-    public void PlayerLose( int LostPlayer, float VictoryTime)
+
+    public void PlayerLose(int LostPlayer, float VictoryTime)
     {
         Debug.Log(LostPlayer);
         PlayerHealth[LostPlayer--]--; //Why does everything start with 0
         StartCoroutine(WaitForVictoryGraphics(VictoryTime));
     }
+
     IEnumerator WaitForVictoryGraphics(float waitingtime)
     {
         yield return new WaitForSeconds(waitingtime);
@@ -58,7 +60,6 @@ public class MinigameManager : MonoBehaviour
             changeScene("TransitionScene");
         }
     }
-
 
     private void GameOver(int GameOverPlayer)
     {

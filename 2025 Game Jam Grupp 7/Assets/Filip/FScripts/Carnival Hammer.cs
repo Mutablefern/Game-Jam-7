@@ -16,17 +16,16 @@ public class CarnivalHammer : MonoBehaviour
         string playerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
         int.TryParse(playerNumberString, out playerNumber);
         charge = 0f;
-        StartCoroutine(Swing(charge));
+        StartCoroutine(Swing());
     }
 
     void FixedUpdate()
     {
-        if (!hasEnded && charge >= 0f)
+        if (!hasEnded && charge > 0f)
         {
             charge -= 0.06f;
+            Debug.Log($"Player {playerNumber} charge: {charge}");
         }
-
-        Debug.Log($"Player {playerNumber} charge: {charge}");
     }
 
     private void OnButtonOne(InputValue value)
@@ -37,7 +36,7 @@ public class CarnivalHammer : MonoBehaviour
         }
     }
 
-    private IEnumerator Swing(float charge)
+    private IEnumerator Swing()
     {
         if (!hasEnded)
         {
@@ -47,14 +46,11 @@ public class CarnivalHammer : MonoBehaviour
 
             hasEnded = true;
             ReportResult();
-
-            Debug.Log("Swing");
         }
     }
 
     private void ReportResult()
     {
-       Debug.Log("Reported Score");
        ScoreManager.Instance.ReportScore(playerNumber, score);
     }
 }
