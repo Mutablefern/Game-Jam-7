@@ -64,6 +64,11 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
+    public void LoadRandomMicroGame(float AnimationTIme) //If no player loses. If you both are frame perfect you deserve to be stuck in this hell
+    {
+        StartCoroutine(WaitForVictoryGraphics(AnimationTIme));
+    }
+
     private void GameOver(int GameOverPlayer)
     {
         changeScenebyName("VictoryScene");

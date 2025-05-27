@@ -6,6 +6,7 @@ public class ScoreManager : MonoBehaviour
 
     private float?[] finalScore = new float?[2];
     private bool gameEnded = false;
+    [SerializeField] float EndingTime;
 
     void Awake()
     {
@@ -35,19 +36,20 @@ public class ScoreManager : MonoBehaviour
 
         if (!p1valid && !p2valid)
         {
-            Debug.Log("Both players went over 100. Nobody Wins");
+            MinigameManager.Instance.PlayerLose(1, EndingTime);
+            MinigameManager.Instance.PlayerLose(2, EndingTime);
         }
         else if (p1valid && (!p2valid || score1 > score2))
         {
-            Debug.Log("Player 1 wins!");
+            MinigameManager.Instance.PlayerLose(2, EndingTime);
         }
         else if (p2valid && (!p1valid || score2 > score1))
         {
-            Debug.Log("Player 2 wins!");
+            MinigameManager.Instance.PlayerLose(1, EndingTime);
         }
         else
         {
-            Debug.Log("It's a tie!");
+            MinigameManager.Instance.LoadRandomMicroGame(EndingTime);
         }
     }
 }
