@@ -8,12 +8,10 @@ public class ReactionDirection : MonoBehaviour
     Vector2 ButtonInput;
     int ChosenDirection = 999999;
     int PlayerNumber;
-    MinigameManager MinigameManager;
     [SerializeField] float Endduration;
 
     private void Start()
     {
-        MinigameManager = GameObject.Find("MinigameManager").GetComponent<MinigameManager>();
         string PlayerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
         int.TryParse(PlayerNumberString, out PlayerNumber);
     }
@@ -88,7 +86,7 @@ public class ReactionDirection : MonoBehaviour
     void Lose()
     {
         Debug.Log(this.gameObject.name + " lost");
-        MinigameManager.PlayerLose(PlayerNumber, Endduration);
+        MinigameManager.Instance.PlayerLose(PlayerNumber, Endduration);
     }
 
     void Win()
@@ -96,12 +94,11 @@ public class ReactionDirection : MonoBehaviour
         Debug.Log(this.gameObject.name + " won");
         if (PlayerNumber == 1)
         {
-            MinigameManager.PlayerLose(2, Endduration);
+            MinigameManager.Instance.PlayerLose(2, Endduration);
         }
         else if (PlayerNumber == 2)
         {
-            MinigameManager.PlayerLose(1, Endduration);
+            MinigameManager.Instance.PlayerLose(1, Endduration);
         }
     }
-
 }

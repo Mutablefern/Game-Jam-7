@@ -9,7 +9,7 @@ public class MinigameManager : MonoBehaviour
     public static MinigameManager Instance;
 
     public string sceneName;
-    public static int[] PlayerHealth = new int[] {3, 3};
+    public static int[] PlayerHealth = new int[] {10, 10};
 
     private void Awake()
     {
@@ -31,38 +31,51 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
-    public void changeScene(string SceneName)
+    public void changeScenebyName(string SceneName)
     {
         SceneManager.LoadScene(SceneName);
     }
-
-    public void PlayerLose(int LostPlayer, float VictoryTime)
+    public void changeScenebyNumber(int SceneNumber)
+    {
+        SceneManager.LoadScene(SceneNumber);
+    }
+    public void PlayerLose( int LostPlayer, float VictoryTime)
     {
         Debug.Log(LostPlayer);
-        PlayerHealth[LostPlayer--]--; //Why does everything start with 0
+        PlayerHealth[LostPlayer-1]--; //Why does everything start with 0
         StartCoroutine(WaitForVictoryGraphics(VictoryTime));
     }
 
     IEnumerator WaitForVictoryGraphics(float waitingtime)
     {
         yield return new WaitForSeconds(waitingtime);
-        if (PlayerHealth[1] == 0)
+        if (PlayerHealth[0] == 0)
         {
             GameOver(1);
         }
-        else if (PlayerHealth[2] == 0)
+        else if (PlayerHealth[1] == 0)
         {
             GameOver(2);
         }
         else
         {
-            int SceneToChangeTo = Random.Range(1, SceneManager.sceneCountInBuildSettings);
-            changeScene("TransitionScene");
+            int SceneToChangeTo = Random.Range(2, SceneManager.sceneCountInBuildSettings - 2);
+            if (SceneToChangeTo == SceneManager.sceneCountInBuildSettings-3)
+            {
+                SceneToChangeTo = (Random.Range(1, 3) + SceneManager.sceneCountInBuildSettings - 3);
+                Debug.Log(SceneToChangeTo);
+            }
+            changeScenebyNumber(SceneToChangeTo);
         }
+    }
+
+    public void LoadRandomMicroGame(float AnimationTIme) //If no player loses. If you both are frame perfect you deserve to be stuck in this hell
+    {
+        StartCoroutine(WaitForVictoryGraphics(AnimationTIme));
     }
 
     private void GameOver(int GameOverPlayer)
     {
-        changeScene("Game Over" + GameOverPlayer);
+        changeScenebyName("VictoryScene");
     }
 }
