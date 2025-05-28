@@ -2,10 +2,14 @@ using System.Collections;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal.Internal;
 
 public class CarnivalHammer : MonoBehaviour
 {
-    private float charge;
+    [SerializeField] private Transform rotatingHammer;
+    [SerializeField] private Animator animator;
+
+    public float charge;
     private float score;
     private bool hasEnded = false;
     private int playerNumber;
@@ -13,6 +17,7 @@ public class CarnivalHammer : MonoBehaviour
 
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         string playerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
         int.TryParse(playerNumberString, out playerNumber);
         charge = 0f;
@@ -25,6 +30,7 @@ public class CarnivalHammer : MonoBehaviour
         {
             charge -= 0.06f;
             Debug.Log($"Player {playerNumber} charge: {charge}");
+            animator.SetBool("Charging", true);
         }
     }
 
@@ -45,12 +51,22 @@ public class CarnivalHammer : MonoBehaviour
             score += charge;
 
             hasEnded = true;
+            if (hasEnded)
+            {
+                animator.SetBool("Charging", false);
+            }
             ReportResult();
+            FinalSwing();
         }
     }
 
     private void ReportResult()
     {
        ScoreManager.Instance.ReportScore(playerNumber, score);
+    }
+
+    private void FinalSwing()
+    {
+        rotatingHammer.localRotation = Quaternion.Euler(0f, 0f, -90f);
     }
 }

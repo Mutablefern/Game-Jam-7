@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: feca51e09c2cd6c4789423652cb23935
+guid: ebcefca33946df745a6be0722f991970
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4181537408156400809
-    second: pngtree-red-cloud-game-explosion-effect-png-image_3716209_0
+      213: 934218026407328678
+    second: Hammer time_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pngtree-red-cloud-game-explosion-effect-png-image_3716209_0
+      name: Hammer time_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 360
-        height: 360
+        x: 39
+        y: 30
+        width: 164
+        height: 196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ac7b243e1ec70a30800000000000000
-      internalID: 4181537408156400809
+      spriteID: 6ab76c6685207fc00800000000000000
+      internalID: 934218026407328678
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      pngtree-red-cloud-game-explosion-effect-png-image_3716209_0: 4181537408156400809
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
