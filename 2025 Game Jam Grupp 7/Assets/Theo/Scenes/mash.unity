@@ -1316,8 +1316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherMashPlayer: {fileID: 1561734775}
-  ButtonSprite1: {fileID: -2951525872224687888, guid: 9649b31727ebfa04ea1f89db26c01318, type: 3}
-  ButtonSprite2: {fileID: -1005039811767821855, guid: 9649b31727ebfa04ea1f89db26c01318, type: 3}
+  ButtonSprite1: {fileID: -1754138005502277824, guid: b214684e7b09bf9478899bacfd9aae60, type: 3}
+  ButtonSprite2: {fileID: 3796968778935386565, guid: b214684e7b09bf9478899bacfd9aae60, type: 3}
   ButtonSprite3: {fileID: -6313154197374540895, guid: b7456572227b3d049bd15f0621dda5cc, type: 3}
   PlayerSpriteWin: {fileID: -9120827089937715895, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
   PlayerSpriteLose: {fileID: 1705679677636289155, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
@@ -1847,8 +1847,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherMashPlayer: {fileID: 1094981443}
-  ButtonSprite1: {fileID: -2951525872224687888, guid: 9649b31727ebfa04ea1f89db26c01318, type: 3}
-  ButtonSprite2: {fileID: -1005039811767821855, guid: 9649b31727ebfa04ea1f89db26c01318, type: 3}
+  ButtonSprite1: {fileID: 4268857406580933976, guid: 290294e65bcbcb64486395fb0cd27052, type: 3}
+  ButtonSprite2: {fileID: 1763190567103869459, guid: 290294e65bcbcb64486395fb0cd27052, type: 3}
   ButtonSprite3: {fileID: -6313154197374540895, guid: b7456572227b3d049bd15f0621dda5cc, type: 3}
   PlayerSpriteWin: {fileID: -9120827089937715895, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
   PlayerSpriteLose: {fileID: 1705679677636289155, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
@@ -2159,7 +2159,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2951525872224687888, guid: 9649b31727ebfa04ea1f89db26c01318, type: 3}
+  m_Sprite: {fileID: -1754138005502277824, guid: b214684e7b09bf9478899bacfd9aae60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -2245,13 +2245,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2951525872224687888, guid: 9649b31727ebfa04ea1f89db26c01318, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 4268857406580933976, guid: 290294e65bcbcb64486395fb0cd27052, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.75, y: 2.04}
+  m_Size: {x: 0.82, y: 1.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

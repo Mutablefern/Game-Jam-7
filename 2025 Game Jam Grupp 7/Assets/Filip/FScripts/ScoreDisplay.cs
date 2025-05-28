@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Text;
 using TMPro;
+using System.Linq;
 
 public class ScoreDisplay : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class ScoreDisplay : MonoBehaviour
 
     void Start()
     {
-        players = FindObjectsOfType<CarnivalHammer>();
+        players = FindObjectsByType<CarnivalHammer>(FindObjectsSortMode.InstanceID);
     }
 
     void Update()
@@ -19,9 +20,9 @@ public class ScoreDisplay : MonoBehaviour
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        foreach (CarnivalHammer player in players)
+        foreach (CarnivalHammer player in players.OrderBy(p => p.playerNumber))
         {
-            stringBuilder.AppendLine($"Player {player.playerNumber}: {player.score:F1}");
+            stringBuilder.AppendLine($"Player {player.playerNumber}: {(int)player.score}");
         }
 
         scoreText.text = stringBuilder.ToString();
