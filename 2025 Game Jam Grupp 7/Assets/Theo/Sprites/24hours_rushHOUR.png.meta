@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      24hours_rushHOUR_0: -1797645841606401215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
