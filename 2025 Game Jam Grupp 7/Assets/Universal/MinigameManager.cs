@@ -34,6 +34,14 @@ public class MinigameManager : MonoBehaviour
             {
                 P1Hearts[i].SetActive(false);
             }
+
+            if (i < PlayerHealth[1])
+            Debug.Log(i);
+            if (i > PlayerHealth[0]-1)
+            {
+                P1Hearts[i].SetActive(false);
+            }
+
             if (i > PlayerHealth[1]-1)
             {
                 P2Hearts[i].SetActive(false);
