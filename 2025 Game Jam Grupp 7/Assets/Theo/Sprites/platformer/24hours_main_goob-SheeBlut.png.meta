@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: b9fd943f244dc5c4ea4e698985612a4c
+guid: e14c22d77f96d7b4ea64eace8fb48ff9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -151737275364953357
-    second: "Sk\xE4rm_0"
+      213: 8603407615225769019
+    second: 24hours_main_goob-SheeBlut_0
+  - first:
+      213: 648683437857485305
+    second: 24hours_main_goob-SheeBlut_1
+  - first:
+      213: 145515121574185410
+    second: 24hours_main_goob-SheeBlut_2
+  - first:
+      213: -192836806862279619
+    second: 24hours_main_goob-SheeBlut_3
+  - first:
+      213: 7998220758149999734
+    second: 24hours_main_goob-SheeBlut_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Sk\xE4rm_0"
+      name: 24hours_main_goob-SheeBlut_0
       rect:
         serializedVersion: 2
-        x: 194
-        y: 693
-        width: 1614
-        height: 1103
+        x: 29
+        y: 9
+        width: 82
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f2bfa280cbe4edf0800000000000000
-      internalID: -151737275364953357
+      spriteID: b3c2c6ba4a1756770800000000000000
+      internalID: 8603407615225769019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 24hours_main_goob-SheeBlut_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 9
+        width: 87
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f1bc2d5626900900800000000000000
+      internalID: 648683437857485305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 24hours_main_goob-SheeBlut_2
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 9
+        width: 92
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c980ea6b39f40200800000000000000
+      internalID: 145515121574185410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 24hours_main_goob-SheeBlut_3
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 14
+        width: 97
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c6a5322f7e25df0800000000000000
+      internalID: -192836806862279619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 24hours_main_goob-SheeBlut_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 9
+        width: 87
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67cafa437636ffe60800000000000000
+      internalID: 7998220758149999734
       vertices: []
       indices: 
       edges: []
@@ -134,8 +234,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "Sk\xE4rm_0": -151737275364953357
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

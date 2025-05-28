@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Bakgrund f\xF6r Hammer Time vers 2_0": 8275995756766471873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
