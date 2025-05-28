@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      24hours_plater_icon_P1_0: -2384362265612101250
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
