@@ -13,6 +13,7 @@ public class MinigameManager : MonoBehaviour
     [SerializeField] GameObject[] P1Hearts;
     [SerializeField] GameObject[] P2Hearts;
     [SerializeField] GameObject Prompt;
+    public static int WhoLost;
 
     private void Awake()
     {
@@ -102,6 +103,7 @@ public class MinigameManager : MonoBehaviour
 
     private void GameOver(int GameOverPlayer)
     {
+        WhoLost = GameOverPlayer;
         changeScenebyName("VictoryScene");
     }
 }
