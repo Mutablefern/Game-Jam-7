@@ -21,6 +21,7 @@ public class MashPlayer : MonoBehaviour
     MashPlayer otherMashPlayerScript;
     SpriteRenderer PlayerSpriteRenderer;
     SpriteRenderer ButtonSpriteRenderer;
+    int PlayerNumber;
 
     private void Awake()
     {
@@ -33,6 +34,8 @@ public class MashPlayer : MonoBehaviour
     {
         StartCoroutine(Timer());
         ButtonSpriteRenderer.sprite = ButtonSprite1;
+        string PlayerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
+        int.TryParse(PlayerNumberString, out PlayerNumber);
     }
 
     IEnumerator Timer()
@@ -51,6 +54,7 @@ public class MashPlayer : MonoBehaviour
         }
         else
         {
+            MinigameManager.Instance.PlayerLose(PlayerNumber, 1.5f);
             PlayerSpriteRenderer.sprite = PlayerSpriteLose;
         }
         ButtonSpriteRenderer.sprite = ButtonSprite3;

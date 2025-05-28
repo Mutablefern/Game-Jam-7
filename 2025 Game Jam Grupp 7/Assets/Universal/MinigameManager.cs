@@ -12,6 +12,7 @@ public class MinigameManager : MonoBehaviour
     public static int[] PlayerHealth = new int[] {5, 5};
     [SerializeField] GameObject[] P1Hearts;
     [SerializeField] GameObject[] P2Hearts;
+    [SerializeField] GameObject Prompt;
 
     private void Awake()
     {
@@ -26,17 +27,13 @@ public class MinigameManager : MonoBehaviour
     }
     private void Start()
     {
-        Debug.Log(P1Hearts.Length);
+        StartCoroutine(WaitforPrompt());;
         for (int i = P1Hearts.Length-1; i > 0; i--)
         {
-            Debug.Log(i);
             if (i > PlayerHealth[0]-1)
             {
                 P1Hearts[i].SetActive(false);
             }
-
-            if (i < PlayerHealth[1])
-            Debug.Log(i);
             if (i > PlayerHealth[0]-1)
             {
                 P1Hearts[i].SetActive(false);
@@ -47,6 +44,11 @@ public class MinigameManager : MonoBehaviour
                 P2Hearts[i].SetActive(false);
             }
         }
+    }
+    IEnumerator WaitforPrompt()
+    {
+        yield return new WaitForSeconds(2);
+        Prompt.SetActive(false);
     }
 
     private void OnDestroy()
