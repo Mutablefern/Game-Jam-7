@@ -14,6 +14,7 @@ public class MashPlayer : MonoBehaviour
     [SerializeField] Sprite PlayerSpriteLose;
     [SerializeField] GameObject buttonGrafik;
     [SerializeField] GameObject playerGrafik;
+    [SerializeField] SoundEffectManager my_soundEffectManager;
 
     int presses;
     bool canPress = true;
@@ -42,6 +43,7 @@ public class MashPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         canPress = false;
+        my_soundEffectManager.SetEffectData("GameOver");
         Debug.Log(name + " Score: " +  presses);
         if (presses > otherMashPlayerScript.GetPresses())
         {
@@ -74,6 +76,7 @@ public class MashPlayer : MonoBehaviour
         if (value.isPressed && canPress)
         {
             presses++;
+            my_soundEffectManager.SetEffectData("Click");
             StartCoroutine(Animate());
         }
     }

@@ -33,17 +33,22 @@ public class FindTheButtonScript : MonoBehaviour
         hasGuessed = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(hasGuessed == true)
         {
+            hasGuessed = false;
             if (collision.gameObject.name == "CorrectButton")
             {
                 my_soundEffectManager.SetEffectData("Win");
                 if (PlayerNumber == 1) MinigameManager.Instance.PlayerLose(2, 0);
                 if (PlayerNumber == 2) MinigameManager.Instance.PlayerLose(1, 0);
             }
-            else if (collision.gameObject.name != "CorrectButton") { MinigameManager.Instance.PlayerLose(PlayerNumber, 0); }
+            else if (collision.gameObject.name != "CorrectButton") 
+            {
+                my_soundEffectManager.SetEffectData("Lose");
+                MinigameManager.Instance.PlayerLose(PlayerNumber, 0);
+            }
         }
     }
 }
