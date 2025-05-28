@@ -48,7 +48,7 @@ public class MinigameManager : MonoBehaviour
     IEnumerator WaitforPrompt()
     {
         yield return new WaitForSeconds(2);
-        Prompt.SetActive(false);
+        //Prompt.SetActive(false);
     }
 
     private void OnDestroy()

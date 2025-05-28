@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      24hours_main_goob-Sheetred_0: -6514826324388244276
+      24hours_main_goob-Sheetred_1: 768909939010528195
+      24hours_main_goob-Sheetred_2: -1949369356884623923
+      24hours_main_goob-Sheetred_3: -6918706898038682139
+      24hours_main_goob-Sheetred_4: 7366195506223314096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
