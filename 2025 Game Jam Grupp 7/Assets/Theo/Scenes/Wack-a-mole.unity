@@ -1487,10 +1487,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0, g: 0.09487033, b: 1, a: 1}
+  m_Sprite: {fileID: 4554680196787300986, guid: b0e45edeb236237459a73500507f4b33, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -1573,7 +1573,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1601,6 +1601,8 @@ MonoBehaviour:
   mole: {fileID: 836208801}
   otherPlayer: {fileID: 1949286348}
   scoreText: {fileID: 1915786613}
+  Sprite1: {fileID: 4554680196787300986, guid: b0e45edeb236237459a73500507f4b33, type: 3}
+  Sprite2: {fileID: -8772945720269353297, guid: 0544bfa599b418d4d824f8bbe8bab4c8, type: 3}
   canPress: 1
 --- !u!114 &1142261407
 MonoBehaviour:
@@ -2563,8 +2565,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0.040880322, b: 0.040880322, a: 1}
+  m_Sprite: {fileID: 7889431693976212460, guid: d439dc3ff89922442acdc294e81634d2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2649,7 +2651,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2677,6 +2679,8 @@ MonoBehaviour:
   mole: {fileID: 836208801}
   otherPlayer: {fileID: 1142261401}
   scoreText: {fileID: 941995363}
+  Sprite1: {fileID: 7889431693976212460, guid: d439dc3ff89922442acdc294e81634d2, type: 3}
+  Sprite2: {fileID: -5010724061021185331, guid: 92a399449a31a564c9dae1566aee82ac, type: 3}
   canPress: 1
 --- !u!114 &1949286354
 MonoBehaviour:

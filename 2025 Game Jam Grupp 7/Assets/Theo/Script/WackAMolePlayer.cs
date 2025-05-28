@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class WackAMolePlayer : MonoBehaviour
     [SerializeField] GameObject mole;
     [SerializeField] GameObject otherPlayer;
     [SerializeField] TMP_Text scoreText;
+    [SerializeField] Sprite Sprite1;
+    [SerializeField] Sprite Sprite2;
 
     Vector2 inputVector;
     int score, posID;
@@ -18,12 +21,15 @@ public class WackAMolePlayer : MonoBehaviour
 
     Mole MoleScript;
     WackAMolePlayer otherPlayerScript;
+    SpriteRenderer SpriteRenderer;
 
     private void Start()
     {
         MoleScript = mole.GetComponent<Mole>();
         otherPlayerScript = otherPlayer.GetComponent<WackAMolePlayer>();
         scoreText.text = "0";
+        SpriteRenderer = GetComponent<SpriteRenderer>();
+        SpriteRenderer.sprite = Sprite1;
     }
 
     private void LateUpdate()
@@ -38,7 +44,7 @@ public class WackAMolePlayer : MonoBehaviour
 
     void OnButtonOne(InputValue value)
     {
-
+        StartCoroutine(Animate());
         if (value.isPressed && checkPos() && canPress)
         {
             score++;
@@ -86,6 +92,17 @@ public class WackAMolePlayer : MonoBehaviour
         {
             posID += 3;
         }
+    }
+
+    IEnumerator Animate()
+    {
+        isPressing = true;
+        SpriteRenderer.sprite = Sprite2;
+        transform.position += new Vector3(0.05f, 0.06f);
+        yield return new WaitForSeconds(0.1f);
+        transform.position -= new Vector3(0.05f, 0.06f);
+        SpriteRenderer.sprite = Sprite1;
+        isPressing = false;
     }
 
     bool checkPos()

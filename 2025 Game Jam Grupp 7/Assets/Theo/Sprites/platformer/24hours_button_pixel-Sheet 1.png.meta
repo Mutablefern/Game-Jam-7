@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 4978c8503e70c5343b1bde8e1183577c
+guid: a95769c47184a2f449f124c9026d6832
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1179719728045208954
-    second: 24hours_timer-Sheet_0
+      213: 2577551609756312708
+    second: 24hours_button_pixel-Sheet 1_0
   - first:
-      213: 7508499127623966104
-    second: 24hours_timer-Sheet_1
+      213: -7366754074449430085
+    second: 24hours_button_pixel-Sheet 1_1
   - first:
-      213: 2215750083553038539
-    second: 24hours_timer-Sheet_2
+      213: 7034293682565723012
+    second: 24hours_button_pixel-Sheet 1_2
   - first:
-      213: -1948313039449196293
-    second: 24hours_timer-Sheet_3
+      213: 2974350800367913826
+    second: 24hours_button_pixel-Sheet 1_3
   - first:
-      213: -7214883590716077861
-    second: 24hours_timer-Sheet_4
+      213: 9082892185716228609
+    second: 24hours_button_pixel-Sheet 1_4
   - first:
-      213: -851724292919195368
-    second: 24hours_timer-Sheet_5
+      213: -3908409424707493815
+    second: 24hours_button_pixel-Sheet 1_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 24hours_timer-Sheet_0
+      name: 24hours_button_pixel-Sheet 1_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 34
-        width: 92
-        height: 82
+        x: 209
+        y: 94
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68a4853682bc0afe0800000000000000
-      internalID: -1179719728045208954
+      spriteID: 484e2c9588d45c320800000000000000
+      internalID: 2577551609756312708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_timer-Sheet_1
+      name: 24hours_button_pixel-Sheet 1_1
       rect:
         serializedVersion: 2
-        x: 194
-        y: 34
-        width: 92
-        height: 82
+        x: 224
+        y: 104
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89d5b52cc2c833860800000000000000
-      internalID: 7508499127623966104
+      spriteID: bb9b7c4333804c990800000000000000
+      internalID: -7366754074449430085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_timer-Sheet_2
+      name: 24hours_button_pixel-Sheet 1_2
       rect:
         serializedVersion: 2
-        x: 354
-        y: 34
-        width: 92
-        height: 82
+        x: 244
+        y: 104
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc0983126fcefbe10800000000000000
-      internalID: 2215750083553038539
+      spriteID: 483ba13c5d4de9160800000000000000
+      internalID: 7034293682565723012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_timer-Sheet_3
+      name: 24hours_button_pixel-Sheet 1_3
       rect:
         serializedVersion: 2
-        x: 514
-        y: 34
-        width: 92
-        height: 82
+        x: 264
+        y: 94
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf87e5cfc9336f4e0800000000000000
-      internalID: -1948313039449196293
+      spriteID: 26b045d4b44074920800000000000000
+      internalID: 2974350800367913826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_timer-Sheet_4
+      name: 24hours_button_pixel-Sheet 1_4
       rect:
         serializedVersion: 2
-        x: 674
-        y: 34
-        width: 92
-        height: 82
+        x: 39
+        y: 0
+        width: 82
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd8c29fa9959fdb90800000000000000
-      internalID: -7214883590716077861
+      spriteID: 10289c6d15aec0e70800000000000000
+      internalID: 9082892185716228609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_timer-Sheet_5
+      name: 24hours_button_pixel-Sheet 1_5
       rect:
         serializedVersion: 2
-        x: 834
-        y: 34
-        width: 92
-        height: 82
+        x: 199
+        y: 0
+        width: 82
+        height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,8 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8190bf9a4411e24f0800000000000000
-      internalID: -851724292919195368
+      spriteID: 940658bf55a82c9c0800000000000000
+      internalID: -3908409424707493815
       vertices: []
       indices: 
       edges: []
@@ -260,12 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      24hours_timer-Sheet_0: -1179719728045208954
-      24hours_timer-Sheet_1: 7508499127623966104
-      24hours_timer-Sheet_2: 2215750083553038539
-      24hours_timer-Sheet_3: -1948313039449196293
-      24hours_timer-Sheet_4: -7214883590716077861
-      24hours_timer-Sheet_5: -851724292919195368
+      24hours_button_pixel-Sheet 1_0: 2577551609756312708
+      24hours_button_pixel-Sheet 1_1: -7366754074449430085
+      24hours_button_pixel-Sheet 1_2: 7034293682565723012
+      24hours_button_pixel-Sheet 1_3: 2974350800367913826
+      24hours_button_pixel-Sheet 1_4: 9082892185716228609
+      24hours_button_pixel-Sheet 1_5: -3908409424707493815
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

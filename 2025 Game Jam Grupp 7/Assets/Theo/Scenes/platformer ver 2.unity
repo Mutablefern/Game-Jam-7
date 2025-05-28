@@ -6965,6 +6965,26 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 97773225087231016, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: sprite1
+      value: 
+      objectReference: {fileID: 8603407615225769019, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+    - target: {fileID: 97773225087231016, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: sprite2
+      value: 
+      objectReference: {fileID: 648683437857485305, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+    - target: {fileID: 97773225087231016, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: sprite3
+      value: 
+      objectReference: {fileID: 145515121574185410, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+    - target: {fileID: 97773225087231016, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: sprite4
+      value: 
+      objectReference: {fileID: -192836806862279619, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+    - target: {fileID: 97773225087231016, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: sprite5
+      value: 
+      objectReference: {fileID: 7998220758149999734, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+    - target: {fileID: 97773225087231016, guid: cf25192f3194535418cb0a850f773428, type: 3}
       propertyPath: runAnimationSpeed
       value: 0.05
       objectReference: {fileID: 0}
@@ -7028,6 +7048,34 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -12.4
       objectReference: {fileID: 0}
+    - target: {fileID: 8300415433035614887, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8603407615225769019, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+    - target: {fileID: 8575956435344398563, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6514826324388244276, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
+    - target: {fileID: 8756063427570303109, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: sprite1
+      value: 
+      objectReference: {fileID: -6514826324388244276, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
+    - target: {fileID: 8756063427570303109, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: sprite2
+      value: 
+      objectReference: {fileID: 768909939010528195, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
+    - target: {fileID: 8756063427570303109, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: sprite3
+      value: 
+      objectReference: {fileID: -1949369356884623923, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
+    - target: {fileID: 8756063427570303109, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: sprite4
+      value: 
+      objectReference: {fileID: -6918706898038682139, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
+    - target: {fileID: 8756063427570303109, guid: cf25192f3194535418cb0a850f773428, type: 3}
+      propertyPath: sprite5
+      value: 
+      objectReference: {fileID: 7366195506223314096, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
     - target: {fileID: 8756063427570303109, guid: cf25192f3194535418cb0a850f773428, type: 3}
       propertyPath: runAnimationSpeed
       value: 0.05

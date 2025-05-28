@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      24hours_lazy_background_0: 583180784032301686
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
