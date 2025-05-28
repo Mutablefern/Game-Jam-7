@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: cf491a407bbd7aa4ab3dee3dca8d4851
+guid: c2ccb70f0e76d524ca6737dc132fedfd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7575206297153952576
-    second: 24hours_button_wack_a_mole-Sheet 1_0
+      213: 721825207919303372
+    second: 24hours_button_wack_a_mole-Sheet_0
   - first:
-      213: -1131561481834071791
-    second: 24hours_button_wack_a_mole-Sheet 1_1
+      213: 5560491455080375799
+    second: 24hours_button_wack_a_mole-Sheet_1
   - first:
-      213: 1532710418794572021
-    second: 24hours_button_wack_a_mole-Sheet 1_2
+      213: -5507767326893570508
+    second: 24hours_button_wack_a_mole-Sheet_2
   - first:
-      213: 2681426236204438508
-    second: 24hours_button_wack_a_mole-Sheet 1_3
+      213: -7919029881851583625
+    second: 24hours_button_wack_a_mole-Sheet_3
   - first:
-      213: 4575288072830397788
-    second: 24hours_button_wack_a_mole-Sheet 1_4
+      213: 3694466132719958789
+    second: 24hours_button_wack_a_mole-Sheet_4
   - first:
-      213: 7282278548133997136
-    second: 24hours_button_wack_a_mole-Sheet 1_5
+      213: 901852435662429132
+    second: 24hours_button_wack_a_mole-Sheet_5
   - first:
-      213: 1367906969369094691
-    second: 24hours_button_wack_a_mole-Sheet 1_6
+      213: 3221956673081920852
+    second: 24hours_button_wack_a_mole-Sheet_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -118,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 24hours_button_wack_a_mole-Sheet 1_0
+      name: 24hours_button_wack_a_mole-Sheet_0
       rect:
         serializedVersion: 2
         x: 39
@@ -133,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04bd92afdf9802960800000000000000
-      internalID: 7575206297153952576
+      spriteID: ccad3f3c330740a00800000000000000
+      internalID: 721825207919303372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_button_wack_a_mole-Sheet 1_1
+      name: 24hours_button_wack_a_mole-Sheet_1
       rect:
         serializedVersion: 2
         x: 164
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 119f3c9d3d2eb40f0800000000000000
-      internalID: -1131561481834071791
+      spriteID: 7f529a48485da2d40800000000000000
+      internalID: 5560491455080375799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_button_wack_a_mole-Sheet 1_2
+      name: 24hours_button_wack_a_mole-Sheet_2
       rect:
         serializedVersion: 2
         x: 199
@@ -177,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f86ac75108454510800000000000000
-      internalID: 1532710418794572021
+      spriteID: 436810f2cca7093b0800000000000000
+      internalID: -5507767326893570508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_button_wack_a_mole-Sheet 1_3
+      name: 24hours_button_wack_a_mole-Sheet_3
       rect:
         serializedVersion: 2
         x: 169
@@ -199,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce3d06c74f6563520800000000000000
-      internalID: 2681426236204438508
+      spriteID: 773688e7744f91290800000000000000
+      internalID: -7919029881851583625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_button_wack_a_mole-Sheet 1_4
+      name: 24hours_button_wack_a_mole-Sheet_4
       rect:
         serializedVersion: 2
         x: 304
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5d2326e240be7f30800000000000000
-      internalID: 4575288072830397788
+      spriteID: 50bfb73af51654330800000000000000
+      internalID: 3694466132719958789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_button_wack_a_mole-Sheet 1_5
+      name: 24hours_button_wack_a_mole-Sheet_5
       rect:
         serializedVersion: 2
         x: 169
@@ -243,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05a69f0a1c9df0560800000000000000
-      internalID: 7282278548133997136
+      spriteID: ccbda731306048c00800000000000000
+      internalID: 901852435662429132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 24hours_button_wack_a_mole-Sheet 1_6
+      name: 24hours_button_wack_a_mole-Sheet_6
       rect:
         serializedVersion: 2
         x: 304
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32aa6032428cbf210800000000000000
-      internalID: 1367906969369094691
+      spriteID: 45d4fb40680b6bc20800000000000000
+      internalID: 3221956673081920852
       vertices: []
       indices: 
       edges: []
@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      24hours_button_wack_a_mole-Sheet_0: 721825207919303372
+      24hours_button_wack_a_mole-Sheet_1: 5560491455080375799
+      24hours_button_wack_a_mole-Sheet_2: -5507767326893570508
+      24hours_button_wack_a_mole-Sheet_3: -7919029881851583625
+      24hours_button_wack_a_mole-Sheet_4: 3694466132719958789
+      24hours_button_wack_a_mole-Sheet_5: 901852435662429132
+      24hours_button_wack_a_mole-Sheet_6: 3221956673081920852
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

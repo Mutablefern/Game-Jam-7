@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      24hours_wack_a_mole1_0: -8703858243555490816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
