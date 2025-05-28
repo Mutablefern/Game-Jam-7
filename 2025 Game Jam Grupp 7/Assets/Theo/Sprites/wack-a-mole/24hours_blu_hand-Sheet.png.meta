@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      24hours_blu_hand-Sheet_0: -8772945720269353297
+      24hours_blu_hand-Sheet_1: 1170762829080654232
+      24hours_blu_hand-Sheet_2: -4289911186265416715
+      24hours_blu_hand-Sheet_3: -6534225478066694015
+      24hours_blu_hand-Sheet_4: 1009670306694723739
+      24hours_blu_hand-Sheet_5: 4983989621600021771
+      24hours_blu_hand-Sheet_6: 6418183708109223232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
