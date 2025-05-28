@@ -30,8 +30,10 @@ public class PlayerPlatformer : MonoBehaviour
     [SerializeField] Sprite sprite4;
     [SerializeField] Sprite sprite5;
 
+
     [Header("Misc")]
     [SerializeField] GameObject otherPlayer;
+    [SerializeField] SoundEffectManager my_soundEffectManager;
     int PlayerNumber;
 
     Vector2 movementVector, startPos;
@@ -110,6 +112,7 @@ public class PlayerPlatformer : MonoBehaviour
         {
             if (CheckGrounded())
             {
+                my_soundEffectManager.SetEffectData("Jump");
                 ApplyJumpForce();
             }
             else if (coyoteTimer > 0f)
@@ -229,6 +232,7 @@ public class PlayerPlatformer : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
+            my_soundEffectManager.SetEffectData("Death");
             transform.position = startPos;
         }
     }
@@ -238,6 +242,7 @@ public class PlayerPlatformer : MonoBehaviour
         if (other.CompareTag("Finish") && !otherPlayerScript.GetHasWon())
         {
             Debug.Log(name + " wins");
+            my_soundEffectManager.SetEffectData("Win");
             hasWon = true;
             otherPlayerScript.Loss();
         }
