@@ -40,10 +40,10 @@ public class FindTheButtonScript : MonoBehaviour
             if (collision.gameObject.name == "CorrectButton")
             {
                 my_soundEffectManager.SetEffectData("Win");
-                //if (PlayerNumber == 1) MinigameManager.Instance.PlayerLose(2, 0);
-                //if (PlayerNumber == 2) MinigameManager.Instance.PlayerLose(1, 0);
+                if (PlayerNumber == 1) MinigameManager.Instance.PlayerLose(2, 0);
+                if (PlayerNumber == 2) MinigameManager.Instance.PlayerLose(1, 0);
             }
-            //else if (collision.gameObject.name != "CorrectButton") { MinigameManager.Instance.PlayerLose(PlayerNumber, 0); }
+            else if (collision.gameObject.name != "CorrectButton") { MinigameManager.Instance.PlayerLose(PlayerNumber, 0); }
         }
     }
 }
