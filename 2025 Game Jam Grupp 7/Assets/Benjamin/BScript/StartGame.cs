@@ -4,8 +4,12 @@ using UnityEngine.InputSystem;
 public class StartGame : MonoBehaviour
 {
 
-    void onButtonOne(InputValue Value)
+    void OnButtonOne(InputValue Value)
     {
-        MinigameManager.Instance.LoadRandomMicroGame(0);
+        if (Value.isPressed)
+        {
+            Debug.Log("input");
+            MinigameManager.Instance.LoadRandomMicroGame(0);
+        }
     }
 }
