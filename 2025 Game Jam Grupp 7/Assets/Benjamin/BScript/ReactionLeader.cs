@@ -17,6 +17,6 @@ public class ReactionLeader : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(1f, 3f));
         ChosenDirection = Random.Range(0, 4);
         Debug.Log(ChosenDirection);
-        Instantiate(DirectionObject[ChosenDirection]);
+        Instantiate(DirectionObject[ChosenDirection], transform.position, Quaternion.identity);
     }
 }
