@@ -9,10 +9,10 @@ public class WackAMolePlayer : MonoBehaviour
     [SerializeField] int pointsToWin = 10;
     [SerializeField] GameObject mole;
     [SerializeField] GameObject otherPlayer;
-    [SerializeField] TextMeshPro scoreText;
+    [SerializeField] TMP_Text scoreText;
 
     Vector2 inputVector;
-    int score;
+    int score, posID;
     bool isPressing;
     public bool canPress = true;
 
@@ -26,7 +26,7 @@ public class WackAMolePlayer : MonoBehaviour
         scoreText.text = "0";
     }
 
-    void Update()
+    private void LateUpdate()
     {
         SetPos();
     }
@@ -39,7 +39,7 @@ public class WackAMolePlayer : MonoBehaviour
     void OnButtonOne(InputValue value)
     {
 
-        if (value.isPressed && transform.position == mole.transform.position && canPress)
+        if (value.isPressed && checkPos() && canPress)
         {
             score++;
             scoreText.text = score.ToString();
@@ -56,15 +56,22 @@ public class WackAMolePlayer : MonoBehaviour
     void SetPos()
     {
         if (isPressing) { return; }
+        posID = 0;
         transform.position = Vector2.zero;
         if (inputVector.x > 0)
         {
             transform.position += new Vector3(3,0);
+            posID += 2;
         }
         else if (inputVector.x < 0)
         {
             transform.position += new Vector3(-3, 0);
         }
+        else
+        {
+            posID += 1;
+        }
+
 
         if (inputVector.y > 0)
         {
@@ -73,8 +80,24 @@ public class WackAMolePlayer : MonoBehaviour
         else if (inputVector.y < 0)
         {
             transform.position += new Vector3(0, -3);
+            posID += 6;
+        }
+        else
+        {
+            posID += 3;
         }
     }
 
+    bool checkPos()
+    {
+        if (MoleScript.GetPosID() == posID)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
 }
