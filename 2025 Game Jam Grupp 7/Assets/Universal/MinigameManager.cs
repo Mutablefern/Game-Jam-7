@@ -26,13 +26,20 @@ public class MinigameManager : MonoBehaviour
     }
     private void Start()
     {
-        for (int i = 0; i < P1Hearts.Length; i++)
+        Debug.Log(P1Hearts.Length);
+        for (int i = P1Hearts.Length-1; i > 0; i--)
         {
             if (i < PlayerHealth[1])
             {
                 P1Hearts[i].SetActive(false);
             }
             if (i < PlayerHealth[2])
+            Debug.Log(i);
+            if (i > PlayerHealth[0]-1)
+            {
+                P1Hearts[i].SetActive(false);
+            }
+            if (i > PlayerHealth[1]-1)
             {
                 P2Hearts[i].SetActive(false);
             }
@@ -64,6 +71,7 @@ public class MinigameManager : MonoBehaviour
 
     IEnumerator WaitForVictoryGraphics(float waitingtime)
     {
+        Debug.Log(PlayerHealth[0] + ", " + PlayerHealth[1]);
         yield return new WaitForSeconds(waitingtime);
         if (PlayerHealth[0] == 0)
         {
@@ -92,6 +100,7 @@ public class MinigameManager : MonoBehaviour
 
     private void GameOver(int GameOverPlayer)
     {
+        Debug.Log(GameOverPlayer + "loses it all");
         changeScenebyName("VictoryScene");
     }
 }

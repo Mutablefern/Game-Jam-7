@@ -9,17 +9,17 @@ public class CarnivalHammer : MonoBehaviour
 {
     [SerializeField] private Transform rotatingHammer;
 
-    public float charge;
-    private float score;
+    public int charge;
+    public int score;
     private bool hasEnded = false;
-    private int playerNumber;
-    public float maxScore = 100f;
+    public int playerNumber;
+    public float maxScore = 10000f;
 
     void Start()
     {
         string playerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
         int.TryParse(playerNumberString, out playerNumber);
-        charge = 0f;
+        charge = 0;
         StartCoroutine(Swing());
     }
 
@@ -27,7 +27,7 @@ public class CarnivalHammer : MonoBehaviour
     {
         if (!hasEnded && charge > 0f)
         {
-            charge -= 0.06f;
+            charge -= 6;
             Debug.Log($"Player {playerNumber} charge: {charge}");
         }
     }
@@ -36,7 +36,7 @@ public class CarnivalHammer : MonoBehaviour
     {
         if (!hasEnded && value.isPressed)
         {
-            charge += 5f;
+            charge += 500;
         }
     }
 

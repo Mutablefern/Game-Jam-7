@@ -31,8 +31,8 @@ public class ScoreManager : MonoBehaviour
         float score1 = finalScore[0].Value;
         float score2 = finalScore[1].Value;
 
-        bool p1valid = score1 <= 100;
-        bool p2valid = score2 <= 100;
+        bool p1valid = score1 <= 10000;
+        bool p2valid = score2 <= 10000;
 
         if (!p1valid && !p2valid)
         {

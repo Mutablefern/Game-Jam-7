@@ -2,22 +2,23 @@ using UnityEngine;
 
 public class Mole : MonoBehaviour
 {
-    int posID;
+    int posID, lastPos;
 
     private void Start()
     {
         RandomPos();
     }
 
-    private void Update()
-    {
-
-    }
-
     public void RandomPos()
     {
         transform.position = Vector3.zero;
+        lastPos = posID;
         posID = Random.Range(0, 9);
+        if( posID == lastPos)
+        {
+            RandomPos();
+            return;
+        }
         if (posID < 3)
         {
             transform.position += new Vector3(0,3);
@@ -36,5 +37,10 @@ public class Mole : MonoBehaviour
             transform.position += new Vector3(3, 0);
         }
 
+    }
+
+    public int GetPosID()
+    {
+        return posID;
     }
 }
