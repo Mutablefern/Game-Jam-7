@@ -1436,6 +1436,7 @@ GameObject:
   - component: {fileID: 1142261404}
   - component: {fileID: 1142261407}
   - component: {fileID: 1142261406}
+  - component: {fileID: 1142261408}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -1603,6 +1604,7 @@ MonoBehaviour:
   scoreText: {fileID: 1915786613}
   sprite1: {fileID: -8772945720269353297, guid: 0544bfa599b418d4d824f8bbe8bab4c8, type: 3}
   sprite2: {fileID: 4554680196787300986, guid: b0e45edeb236237459a73500507f4b33, type: 3}
+  my_soundEffectManager: {fileID: 1142261408}
   canPress: 1
 --- !u!114 &1142261407
 MonoBehaviour:
@@ -1634,6 +1636,25 @@ MonoBehaviour:
   m_DefaultActionMap: Player2
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1142261408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142261401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32660a601561e0740a08289ed18f6aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectPrefab: {fileID: 1580603872}
+  currentVisualEffect: null
+  effectInfoArray:
+  - name: Click
+    animationTriggerName: 
+    soundEffect: {fileID: 8300000, guid: 6eabe629e51470e4391dd6280429268a, type: 3}
+    volume: 2
 --- !u!1 &1255866640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,6 +2833,7 @@ MonoBehaviour:
   scoreText: {fileID: 941995363}
   sprite1: {fileID: -5010724061021185331, guid: 92a399449a31a564c9dae1566aee82ac, type: 3}
   sprite2: {fileID: 7889431693976212460, guid: d439dc3ff89922442acdc294e81634d2, type: 3}
+  my_soundEffectManager: {fileID: 1949286355}
   canPress: 1
 --- !u!114 &1949286354
 MonoBehaviour:
@@ -2857,7 +2879,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefab: {fileID: 1580603872}
   currentVisualEffect: null
-  effectInfoArray: []
+  effectInfoArray:
+  - name: Click
+    animationTriggerName: 
+    soundEffect: {fileID: 8300000, guid: 6eabe629e51470e4391dd6280429268a, type: 3}
+    volume: 2
 --- !u!1 &2087153512
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class WackAMolePlayer : MonoBehaviour
     [SerializeField] TMP_Text scoreText;
     [SerializeField] Sprite sprite1;
     [SerializeField] Sprite sprite2;
+    [SerializeField] SoundEffectManager my_soundEffectManager;
 
     Vector2 inputVector;
     int score, posID;
@@ -44,9 +45,11 @@ public class WackAMolePlayer : MonoBehaviour
     void OnButtonOne(InputValue value)
     {
         StartCoroutine(Animate());
+
         if (value.isPressed && checkPos() && canPress)
         {
             score++;
+            my_soundEffectManager.SetEffectData("Click");
             scoreText.text = score.ToString();
             MoleScript.RandomPos();
             if (score == pointsToWin)
