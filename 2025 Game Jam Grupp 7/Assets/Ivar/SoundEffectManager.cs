@@ -46,15 +46,12 @@ public class SoundEffectManager : MonoBehaviour
             audioSource.volume = info.volume;
             audioSource.Play();
         }
-
-        newEffect.GetComponent<Animator>().SetTrigger(info.animationTriggerName);
     }
 
     [Serializable]
     public class VisualEffectInfo
     {
         public string name;
-        public string animationTriggerName;
         public AudioClip soundEffect;
         public float volume = 1f;
     }

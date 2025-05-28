@@ -7,6 +7,7 @@ public class FindTheButtonScript : MonoBehaviour
 {
     [SerializeField] Rigidbody2D my_rigidbody;
     [SerializeField] BoxCollider2D my_boxCollider;
+    [SerializeField] SoundEffectManager my_soundEffectManager;
     private bool hasGuessed = false;
     private Vector2 movementVector;
     int PlayerNumber;
@@ -38,10 +39,11 @@ public class FindTheButtonScript : MonoBehaviour
         {
             if (collision.gameObject.name == "CorrectButton")
             {
-                if (PlayerNumber == 1) MinigameManager.Instance.PlayerLose(2, 0);
-                if (PlayerNumber == 2) MinigameManager.Instance.PlayerLose(1, 0);
+                my_soundEffectManager.SetEffectData("Win");
+                //if (PlayerNumber == 1) MinigameManager.Instance.PlayerLose(2, 0);
+                //if (PlayerNumber == 2) MinigameManager.Instance.PlayerLose(1, 0);
             }
-            else { MinigameManager.Instance.PlayerLose(PlayerNumber, 0); }
+            //else if (collision.gameObject.name != "CorrectButton") { MinigameManager.Instance.PlayerLose(PlayerNumber, 0); }
         }
     }
 }
