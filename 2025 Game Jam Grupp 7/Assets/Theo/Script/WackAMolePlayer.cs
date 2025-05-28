@@ -57,6 +57,14 @@ public class WackAMolePlayer : MonoBehaviour
                 Debug.Log(name + " wins");
                 canPress = false;
                 otherPlayerScript.canPress = false;
+                if (name == "Player 1")
+                {
+                    MinigameManager.Instance.PlayerLose(2,1);
+                }
+                else if (name == "Player 2")
+                {
+                    MinigameManager.Instance.PlayerLose(1, 1);
+                }
             } 
         } 
     }
