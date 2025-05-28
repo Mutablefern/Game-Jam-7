@@ -326,7 +326,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1960558755795111297, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
+  m_Sprite: {fileID: -6514826324388244276, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1319,8 +1319,8 @@ MonoBehaviour:
   ButtonSprite1: {fileID: -1754138005502277824, guid: b214684e7b09bf9478899bacfd9aae60, type: 3}
   ButtonSprite2: {fileID: 3796968778935386565, guid: b214684e7b09bf9478899bacfd9aae60, type: 3}
   ButtonSprite3: {fileID: -6313154197374540895, guid: b7456572227b3d049bd15f0621dda5cc, type: 3}
-  PlayerSpriteWin: {fileID: -9120827089937715895, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
-  PlayerSpriteLose: {fileID: 1705679677636289155, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
+  PlayerSpriteWin: {fileID: 7998220758149999734, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+  PlayerSpriteLose: {fileID: -192836806862279619, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
   buttonGrafik: {fileID: 1796423754}
   playerGrafik: {fileID: 1320528336}
 --- !u!1 &1188880584
@@ -1536,7 +1536,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1960558755795111297, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
+  m_Sprite: {fileID: 8603407615225769019, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -1850,8 +1850,8 @@ MonoBehaviour:
   ButtonSprite1: {fileID: 4268857406580933976, guid: 290294e65bcbcb64486395fb0cd27052, type: 3}
   ButtonSprite2: {fileID: 1763190567103869459, guid: 290294e65bcbcb64486395fb0cd27052, type: 3}
   ButtonSprite3: {fileID: -6313154197374540895, guid: b7456572227b3d049bd15f0621dda5cc, type: 3}
-  PlayerSpriteWin: {fileID: -9120827089937715895, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
-  PlayerSpriteLose: {fileID: 1705679677636289155, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
+  PlayerSpriteWin: {fileID: 7366195506223314096, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
+  PlayerSpriteLose: {fileID: -6918706898038682139, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
   buttonGrafik: {fileID: 1823206339}
   playerGrafik: {fileID: 236693027}
 --- !u!1001 &1701448431
