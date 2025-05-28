@@ -9,7 +9,9 @@ public class MinigameManager : MonoBehaviour
     public static MinigameManager Instance;
 
     public string sceneName;
-    public static int[] PlayerHealth = new int[] {10, 10};
+    public static int[] PlayerHealth = new int[] {5, 5};
+    [SerializeField] GameObject[] P1Hearts;
+    [SerializeField] GameObject[] P2Hearts;
 
     private void Awake()
     {
@@ -20,6 +22,20 @@ public class MinigameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+    private void Start()
+    {
+        for (int i = 0; i < P1Hearts.Length; i++)
+        {
+            if (i < PlayerHealth[1])
+            {
+                P1Hearts[i].SetActive(false);
+            }
+            if (i < PlayerHealth[2])
+            {
+                P2Hearts[i].SetActive(false);
+            }
         }
     }
 
