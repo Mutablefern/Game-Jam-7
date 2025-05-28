@@ -28,7 +28,6 @@ public class CarnivalHammer : MonoBehaviour
         if (!hasEnded && charge > 0f)
         {
             charge -= 6;
-            Debug.Log($"Player {playerNumber} charge: {charge}");
         }
     }
 

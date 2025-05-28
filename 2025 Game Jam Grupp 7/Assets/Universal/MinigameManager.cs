@@ -26,17 +26,14 @@ public class MinigameManager : MonoBehaviour
     }
     private void Start()
     {
-        Debug.Log(P1Hearts.Length);
         for (int i = P1Hearts.Length-1; i > 0; i--)
         {
-            Debug.Log(i);
             if (i > PlayerHealth[0]-1)
             {
                 P1Hearts[i].SetActive(false);
             }
 
             if (i < PlayerHealth[1])
-            Debug.Log(i);
             if (i > PlayerHealth[0]-1)
             {
                 P1Hearts[i].SetActive(false);
@@ -67,14 +64,12 @@ public class MinigameManager : MonoBehaviour
     }
     public void PlayerLose( int LostPlayer, float VictoryTime)
     {
-        Debug.Log(LostPlayer);
         PlayerHealth[LostPlayer-1]--; //Why does everything start with 0
         StartCoroutine(WaitForVictoryGraphics(VictoryTime));
     }
 
     IEnumerator WaitForVictoryGraphics(float waitingtime)
     {
-        Debug.Log(PlayerHealth[0] + ", " + PlayerHealth[1]);
         yield return new WaitForSeconds(waitingtime);
         if (PlayerHealth[0] == 0)
         {
@@ -90,7 +85,6 @@ public class MinigameManager : MonoBehaviour
             if (SceneToChangeTo == SceneManager.sceneCountInBuildSettings-3)
             {
                 SceneToChangeTo = (Random.Range(1, 3) + SceneManager.sceneCountInBuildSettings - 3);
-                Debug.Log(SceneToChangeTo);
             }
             changeScenebyNumber(SceneToChangeTo);
         }
@@ -103,7 +97,6 @@ public class MinigameManager : MonoBehaviour
 
     private void GameOver(int GameOverPlayer)
     {
-        Debug.Log(GameOverPlayer + "loses it all");
         changeScenebyName("VictoryScene");
     }
 }

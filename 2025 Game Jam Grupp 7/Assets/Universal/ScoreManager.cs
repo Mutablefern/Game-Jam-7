@@ -17,7 +17,6 @@ public class ScoreManager : MonoBehaviour
     public void ReportScore(int playerNumber, float score)
     {
         finalScore[playerNumber-1] = score;
-        Debug.Log($"Player {playerNumber} finished with score {score}");
 
         if (finalScore[0].HasValue && finalScore[1].HasValue && !gameEnded)
         {
