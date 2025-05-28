@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      24hours_red_hand-Sheet_0: -5010724061021185331
+      24hours_red_hand-Sheet_1: 586395713343164750
+      24hours_red_hand-Sheet_2: -4576144633797805663
+      24hours_red_hand-Sheet_3: -1051126360245754866
+      24hours_red_hand-Sheet_4: -456863180310374965
+      24hours_red_hand-Sheet_5: 8133135896442869378
+      24hours_red_hand-Sheet_6: -2047823715745422547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
