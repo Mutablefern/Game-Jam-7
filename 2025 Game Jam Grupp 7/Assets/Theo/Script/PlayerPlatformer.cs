@@ -208,6 +208,7 @@ public class PlayerPlatformer : MonoBehaviour
     {
         hasLost = true;
         MinigameManager.Instance.PlayerLose(PlayerNumber, 2.5f);
+        Debug.Log(PlayerNumber + " lost");
         boxCollider.enabled = false;
         PlayerRigidbody.linearVelocity = Vector2.zero;
         PlayerRigidbody.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
