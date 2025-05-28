@@ -43,6 +43,7 @@ public class MashPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         canPress = false;
+        my_soundEffectManager.SetEffectData("GameOver");
         Debug.Log(name + " Score: " +  presses);
         if (presses > otherMashPlayerScript.GetPresses())
         {
