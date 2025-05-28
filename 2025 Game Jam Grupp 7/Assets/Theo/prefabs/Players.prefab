@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1960558755795111297, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
+  m_Sprite: {fileID: 8603407615225769019, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 7448830306183601659}
   - component: {fileID: 4789888531784460465}
   - component: {fileID: 8756063427570303109}
+  - component: {fileID: 3064595221222801500}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -147,12 +148,13 @@ Transform:
   m_GameObject: {fileID: 3957149004749038746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.7, y: 11.6, z: 0}
+  m_LocalPosition: {x: -22.7, y: -12.4, z: 0}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8059346683110466125}
   - {fileID: 1105659202016623783}
+  - {fileID: 727369035362454007}
   m_Father: {fileID: 1689238768172424788}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &9098007631949810010
@@ -281,12 +283,41 @@ MonoBehaviour:
   extraGarvity: 2000
   gravityDelay: 0
   maxFallSpeedVelocity: -30
-  sprite1: {fileID: -1960558755795111297, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
-  sprite2: {fileID: 3828686508581038977, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
-  sprite3: {fileID: 945471100165431353, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
-  sprite4: {fileID: 1705679677636289155, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
-  sprite5: {fileID: -9120827089937715895, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
+  runAnimationSpeed: 0.05
+  sprite1: {fileID: -6514826324388244276, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
+  sprite2: {fileID: 768909939010528195, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
+  sprite3: {fileID: -1949369356884623923, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
+  sprite4: {fileID: -6918706898038682139, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
+  sprite5: {fileID: 7366195506223314096, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
   otherPlayer: {fileID: 8922791438184129351}
+  my_soundEffectManager: {fileID: 3064595221222801500}
+--- !u!114 &3064595221222801500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3957149004749038746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32660a601561e0740a08289ed18f6aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectPrefab: {fileID: 5730478450666432444}
+  currentVisualEffect: null
+  effectInfoArray:
+  - name: Jump
+    animationTriggerName: 
+    soundEffect: {fileID: 8300000, guid: 06cbc531a5b45b84990f0b5a43448fb8, type: 3}
+    volume: 2
+  - name: Death
+    animationTriggerName: 
+    soundEffect: {fileID: 8300000, guid: 166792abb33596e4d8bcab19ee7e5f5f, type: 3}
+    volume: 2
+  - name: Win
+    animationTriggerName: 
+    soundEffect: {fileID: 8300000, guid: c1133931b934e3e4e90d28b7acde4b38, type: 3}
+    volume: 2
 --- !u!1 &4412486023799821535
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +394,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1960558755795111297, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
+  m_Sprite: {fileID: -6514826324388244276, guid: 56e2f0f5af55a2f44a3f0dfc09aa6497, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -407,6 +438,135 @@ Transform:
   - {fileID: 8282747245524648641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5730478450666432444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 727369035362454007}
+  - component: {fileID: 6334114406762314553}
+  m_Layer: 0
+  m_Name: SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &727369035362454007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5730478450666432444}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5997607289555149504}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &6334114406762314553
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5730478450666432444}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7094968834341479769
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +611,7 @@ GameObject:
   - component: {fileID: 431881623418831352}
   - component: {fileID: 5032484618746615500}
   - component: {fileID: 97773225087231016}
+  - component: {fileID: 468685160198980093}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -467,7 +628,7 @@ Transform:
   m_GameObject: {fileID: 8922791438184129351}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.7, y: 11.6, z: 0}
+  m_LocalPosition: {x: 22.7, y: -12.4, z: 0}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -601,9 +762,38 @@ MonoBehaviour:
   extraGarvity: 2000
   gravityDelay: 0
   maxFallSpeedVelocity: -30
-  sprite1: {fileID: -1960558755795111297, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
-  sprite2: {fileID: 3828686508581038977, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
-  sprite3: {fileID: 945471100165431353, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
-  sprite4: {fileID: 1705679677636289155, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
-  sprite5: {fileID: -9120827089937715895, guid: 1c57cb12e14ee1f4fb97d99670112eb4, type: 3}
+  runAnimationSpeed: 0.05
+  sprite1: {fileID: 8603407615225769019, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+  sprite2: {fileID: 648683437857485305, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+  sprite3: {fileID: 145515121574185410, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+  sprite4: {fileID: -192836806862279619, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
+  sprite5: {fileID: 7998220758149999734, guid: e14c22d77f96d7b4ea64eace8fb48ff9, type: 3}
   otherPlayer: {fileID: 3957149004749038746}
+  my_soundEffectManager: {fileID: 468685160198980093}
+--- !u!114 &468685160198980093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922791438184129351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32660a601561e0740a08289ed18f6aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectPrefab: {fileID: 5730478450666432444}
+  currentVisualEffect: null
+  effectInfoArray:
+  - name: Jump
+    animationTriggerName: 
+    soundEffect: {fileID: 8300000, guid: 06cbc531a5b45b84990f0b5a43448fb8, type: 3}
+    volume: 2
+  - name: Death
+    animationTriggerName: 
+    soundEffect: {fileID: 8300000, guid: 166792abb33596e4d8bcab19ee7e5f5f, type: 3}
+    volume: 2
+  - name: Win
+    animationTriggerName: 
+    soundEffect: {fileID: 8300000, guid: c1133931b934e3e4e90d28b7acde4b38, type: 3}
+    volume: 2
