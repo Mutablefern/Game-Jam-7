@@ -24,16 +24,24 @@ public class Timer : MonoBehaviour
 
     IEnumerator Animate()
     {
-        spriteRenderer.sprite = Sprite1;
-        yield return new WaitForSeconds(1);
-        spriteRenderer.sprite = Sprite2;
-        yield return new WaitForSeconds(1);
-        spriteRenderer.sprite = Sprite3;
-        yield return new WaitForSeconds(1);
-        spriteRenderer.sprite = Sprite4;
-        yield return new WaitForSeconds(1);
-        spriteRenderer.sprite = Sprite5;
-        yield return new WaitForSeconds(1);
-        spriteRenderer.sprite = Sprite6;
+        yield return new WaitForEndOfFrame();
+        if (MinigameManager.Instance.PromptDone)
+        {
+            spriteRenderer.sprite = Sprite1;
+            yield return new WaitForSeconds(1);
+            spriteRenderer.sprite = Sprite2;
+            yield return new WaitForSeconds(1);
+            spriteRenderer.sprite = Sprite3;
+            yield return new WaitForSeconds(1);
+            spriteRenderer.sprite = Sprite4;
+            yield return new WaitForSeconds(1);
+            spriteRenderer.sprite = Sprite5;
+            yield return new WaitForSeconds(1);
+            spriteRenderer.sprite = Sprite6;
+        }
+        else
+        {
+            StartCoroutine (Animate());
+        }
     }
 }

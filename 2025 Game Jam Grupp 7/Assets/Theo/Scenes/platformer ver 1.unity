@@ -914,7 +914,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4470966453103308371, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
       propertyPath: m_text
-      value: Race!
+      value: RACE!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316018811404363178, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6354635284441946485, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
       propertyPath: m_Pivot.x
@@ -1001,6 +1005,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
+--- !u!1 &231344368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4313962048760614813, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
+  m_PrefabInstance: {fileID: 231344367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &232166604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4622,6 +4631,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2589717160434957106, guid: 31b92c6b28dcfbd4e9eea91c3d556954, type: 3}
+      propertyPath: Prompt
+      value: 
+      objectReference: {fileID: 231344368}
     - target: {fileID: 5150216004810577730, guid: 31b92c6b28dcfbd4e9eea91c3d556954, type: 3}
       propertyPath: m_Name
       value: MinigameManager

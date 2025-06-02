@@ -14,6 +14,7 @@ public class MinigameManager : MonoBehaviour
     [SerializeField] GameObject[] P2Hearts;
     [SerializeField] GameObject Prompt;
     public static int WhoLost;
+    public bool PromptDone = false;
 
     private void Awake()
     {
@@ -48,8 +49,13 @@ public class MinigameManager : MonoBehaviour
     }
     IEnumerator WaitforPrompt()
     {
-        yield return new WaitForSeconds(2);
-        //Prompt.SetActive(false);
+        if (Prompt != null)
+        {
+            yield return new WaitForSeconds(1);
+            Prompt.SetActive(false);
+        }
+        PromptDone = true;
+        Debug.Log("Job well done");
     }
 
     private void OnDestroy()
@@ -96,7 +102,7 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
-    public void LoadRandomMicroGame(float AnimationTIme) //If no player loses. If you both are frame perfect you deserve to be stuck in this hell
+    public void LoadRandomMicroGame(float AnimationTIme) //If no player loses. If you both are frame perfect or dont press anything you deserve to be stuck in this hell
     {
         StartCoroutine(WaitForVictoryGraphics(AnimationTIme));
     }

@@ -17,69 +17,74 @@ public class ReactionDirection : MonoBehaviour
     }
     void OnMove(InputValue InputValue)
    {
-        ButtonInput = InputValue.Get<Vector2>();
-        Debug.Log(ButtonInput);
-        ChosenDirection = GameObject.Find("Reaction Leader").GetComponent<ReactionLeader>().ChosenDirection;
-
+        if (MinigameManager.Instance.PromptDone)
+        {
+            ButtonInput = InputValue.Get<Vector2>();
+            Debug.Log(ButtonInput);
+            ChosenDirection = GameObject.Find("Reaction Leader").GetComponent<ReactionLeader>().ChosenDirection;
+        }
    }
 
     private void Update()
     {
-        if (ChosenDirection == 0)
+        if (MinigameManager.Instance.PromptDone)
         {
-            transform.position += Vector3.left * 2;
-            if (ButtonInput == Vector2.left)
+            if (ChosenDirection == 0)
             {
-                Win();
+                transform.position += Vector3.left * 2;
+                if (ButtonInput == Vector2.left)
+                {
+                    Win();
+                }
+                else
+                {
+                    Lose();
+                }
+                Destroy(this.GetComponent<ReactionDirection>());
             }
-            else
+            else if (ChosenDirection == 1)
+            {
+                transform.position += Vector3.right * 2;
+                if (ButtonInput == Vector2.right)
+                {
+                    Win();
+                }
+                else
+                {
+                    Lose();
+                }
+                Destroy(this.GetComponent<ReactionDirection>());
+            }
+            else if (ChosenDirection == 2)
+            {
+                transform.position += Vector3.up * 2;
+                if (ButtonInput == Vector2.up)
+                {
+                    Win();
+                }
+                else
+                {
+                    Lose();
+                }
+                Destroy(this.GetComponent<ReactionDirection>());
+            }
+            else if (ChosenDirection == 3)
+            {
+                transform.position += Vector3.down * 2;
+                if (ButtonInput == Vector2.down)
+                {
+                    Win();
+                }
+                else
+                {
+                    Lose();
+                }
+                Destroy(this.GetComponent<ReactionDirection>());
+            }
+            else if (ButtonInput != new Vector2(0, 0))
             {
                 Lose();
             }
-            Destroy(this.GetComponent<ReactionDirection>());
-        }
-        else if (ChosenDirection == 1)
-        {
-            transform.position += Vector3.right * 2;
-            if (ButtonInput == Vector2.right)
-            {
-                Win();
-            }
-            else
-            {
-                Lose();
-            }
-            Destroy(this.GetComponent<ReactionDirection>());
-        }
-        else if (ChosenDirection == 2)
-        {
-            transform.position += Vector3.up*2;
-            if (ButtonInput == Vector2.up)
-            {
-                Win();
-            }
-            else
-            {
-                Lose();
-            }
-            Destroy(this.GetComponent<ReactionDirection>());
-        }
-        else if (ChosenDirection == 3)
-        {
-            transform.position += Vector3.down*2;
-            if (ButtonInput == Vector2.down)
-            {
-                Win();
-            }
-            else 
-            {
-                Lose();
-            }
-           Destroy(this.GetComponent<ReactionDirection>());
-        }
-        else if (ButtonInput != new Vector2(0, 0))
-        {
-            Lose();
         }
     }
 

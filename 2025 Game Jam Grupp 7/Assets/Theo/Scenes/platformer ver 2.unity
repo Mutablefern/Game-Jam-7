@@ -3888,6 +3888,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2589717160434957106, guid: 31b92c6b28dcfbd4e9eea91c3d556954, type: 3}
+      propertyPath: Prompt
+      value: 
+      objectReference: {fileID: 909539335}
     - target: {fileID: 5150216004810577730, guid: 31b92c6b28dcfbd4e9eea91c3d556954, type: 3}
       propertyPath: m_Name
       value: MinigameManager
@@ -5614,6 +5618,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
+--- !u!1 &909539335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4313962048760614813, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
+  m_PrefabInstance: {fileID: 909539334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &942479537
 GameObject:
   m_ObjectHideFlags: 0

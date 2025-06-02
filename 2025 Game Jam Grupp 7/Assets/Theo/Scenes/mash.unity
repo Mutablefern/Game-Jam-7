@@ -241,6 +241,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2589717160434957106, guid: 31b92c6b28dcfbd4e9eea91c3d556954, type: 3}
+      propertyPath: Prompt
+      value: 
+      objectReference: {fileID: 899041145}
     - target: {fileID: 5150216004810577730, guid: 31b92c6b28dcfbd4e9eea91c3d556954, type: 3}
       propertyPath: m_Name
       value: MinigameManager
@@ -1219,6 +1223,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &899041145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4313962048760614813, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
+  m_PrefabInstance: {fileID: 1484431943929642192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &899043690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2801,6 +2810,14 @@ PrefabInstance:
     - target: {fileID: 4313962048760614813, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470966453103308371, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
+      propertyPath: m_text
+      value: MASH!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316018811404363178, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6354635284441946485, guid: ef29d12fee6e0384f9238aa98cd71f41, type: 3}
       propertyPath: m_Pivot.x

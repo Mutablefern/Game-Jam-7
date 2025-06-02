@@ -39,34 +39,40 @@ public class WackAMolePlayer : MonoBehaviour
 
     void OnMove(InputValue value)
     {
-        inputVector = value.Get<Vector2>();
+        if (MinigameManager.Instance.PromptDone)
+        {
+            inputVector = value.Get<Vector2>();
+        }
     }
 
     void OnButtonOne(InputValue value)
     {
-        StartCoroutine(Animate());
-
-        if (value.isPressed && checkPos() && canPress)
+        if (MinigameManager.Instance.PromptDone)
         {
-            score++;
-            my_soundEffectManager.SetEffectData("Click");
-            scoreText.text = score.ToString();
-            MoleScript.RandomPos();
-            if (score == pointsToWin)
+            StartCoroutine(Animate());
+
+            if (value.isPressed && checkPos() && canPress)
             {
-                Debug.Log(name + " wins");
-                canPress = false;
-                otherPlayerScript.canPress = false;
-                if (name == "Player 1")
+                score++;
+                my_soundEffectManager.SetEffectData("Click");
+                scoreText.text = score.ToString();
+                MoleScript.RandomPos();
+                if (score == pointsToWin)
                 {
-                    MinigameManager.Instance.PlayerLose(2,1);
+                    Debug.Log(name + " wins");
+                    canPress = false;
+                    otherPlayerScript.canPress = false;
+                    if (name == "Player 1")
+                    {
+                        MinigameManager.Instance.PlayerLose(2, 1);
+                    }
+                    else if (name == "Player 2")
+                    {
+                        MinigameManager.Instance.PlayerLose(1, 1);
+                    }
                 }
-                else if (name == "Player 2")
-                {
-                    MinigameManager.Instance.PlayerLose(1, 1);
-                }
-            } 
-        } 
+            }
+        }
     }
 
     void SetPos()

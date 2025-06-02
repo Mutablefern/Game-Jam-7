@@ -18,10 +18,10 @@ public class VictoryManeger : MonoBehaviour
         StartCoroutine(wait());
         if (WhoWon == 1)
         {
-            spriteRenderer.sprite = Sprite1;
+            spriteRenderer.sprite = Sprite2;
         } else
         {
-            spriteRenderer.sprite = Sprite2;
+            spriteRenderer.sprite = Sprite1;
         }
     }
 

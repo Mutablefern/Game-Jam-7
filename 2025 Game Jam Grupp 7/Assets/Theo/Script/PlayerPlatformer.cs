@@ -76,7 +76,10 @@ public class PlayerPlatformer : MonoBehaviour
 
     void OnMove(InputValue value)
     {
-        movementVector = value.Get<Vector2>();
+        if (MinigameManager.Instance.PromptDone)
+        {
+            movementVector = value.Get<Vector2>();
+        }
     }
 
     void Move()
@@ -107,17 +110,20 @@ public class PlayerPlatformer : MonoBehaviour
 
     void OnButtonOne(InputValue value)
     {
-        if (hasWon || hasLost) { return; }
-        if (value.isPressed)
+        if (MinigameManager.Instance.PromptDone)
         {
-            if (CheckGrounded())
+            if (hasWon || hasLost) { return; }
+            if (value.isPressed)
             {
-                my_soundEffectManager.SetEffectData("Jump");
-                ApplyJumpForce();
-            }
-            else if (coyoteTimer > 0f)
-            {
-                ApplyJumpForce();
+                if (CheckGrounded())
+                {
+                    my_soundEffectManager.SetEffectData("Jump");
+                    ApplyJumpForce();
+                }
+                else if (coyoteTimer > 0f)
+                {
+                    ApplyJumpForce();
+                }
             }
         }
     }

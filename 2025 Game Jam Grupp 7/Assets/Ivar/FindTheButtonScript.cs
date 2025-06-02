@@ -14,6 +14,7 @@ public class FindTheButtonScript : MonoBehaviour
 
     private void Start()
     {
+        
         string PlayerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
         int.TryParse(PlayerNumberString, out PlayerNumber);
     }

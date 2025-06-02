@@ -18,6 +18,7 @@ public class MashPlayer : MonoBehaviour
 
     int presses;
     bool canPress = true;
+    bool HasStarted = false;
 
     MashPlayer otherMashPlayerScript;
     SpriteRenderer PlayerSpriteRenderer;
@@ -31,12 +32,16 @@ public class MashPlayer : MonoBehaviour
         PlayerSpriteRenderer = playerGrafik.GetComponent<SpriteRenderer>();
     }
 
-    private void Start()
+    private void Update()
     {
-        StartCoroutine(Timer());
-        ButtonSpriteRenderer.sprite = ButtonSprite1;
-        string PlayerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
-        int.TryParse(PlayerNumberString, out PlayerNumber);
+        if (MinigameManager.Instance.PromptDone && !HasStarted)
+        {
+            StartCoroutine(Timer());
+            ButtonSpriteRenderer.sprite = ButtonSprite1;
+            string PlayerNumberString = Regex.Replace(this.gameObject.name, "[^0-9]", " ");
+            int.TryParse(PlayerNumberString, out PlayerNumber);
+            HasStarted = true;
+        }
     }
 
     IEnumerator Timer()
@@ -73,11 +78,14 @@ public class MashPlayer : MonoBehaviour
 
     void OnButtonOne(InputValue value)
     {
-        if (value.isPressed && canPress)
+        if (MinigameManager.Instance.PromptDone)
         {
-            presses++;
-            my_soundEffectManager.SetEffectData("Click");
-            StartCoroutine(Animate());
+            if (value.isPressed && canPress)
+            {
+                presses++;
+                my_soundEffectManager.SetEffectData("Click");
+                StartCoroutine(Animate());
+            }
         }
     }
 

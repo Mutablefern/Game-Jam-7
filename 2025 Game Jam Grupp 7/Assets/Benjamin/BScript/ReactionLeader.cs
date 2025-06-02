@@ -14,9 +14,18 @@ public class ReactionLeader : MonoBehaviour
 
     IEnumerator Choose()
     {
-        yield return new WaitForSeconds(Random.Range(1f, 3f));
-        ChosenDirection = Random.Range(0, 4);
-        Debug.Log(ChosenDirection);
-        Instantiate(DirectionObject[ChosenDirection], transform.position, Quaternion.identity);
+        if (MinigameManager.Instance.PromptDone)
+        {
+            Debug.Log("GUess");
+            yield return new WaitForSeconds(Random.Range(1f, 3f));
+            ChosenDirection = Random.Range(0, 4);
+            Debug.Log(ChosenDirection);
+            Instantiate(DirectionObject[ChosenDirection], transform.position, Quaternion.identity);
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.1f);
+            StartCoroutine(Choose());
+        }
     }
 }
